@@ -1,0 +1,20 @@
+import os
+from readchar import readkey, key
+
+def limpiar_pantalla():
+    os.system('cls' if os.name=='nt' else 'clear')
+
+def imprir_numero(numero):
+    print(numero)
+    
+contador = 0
+print("hola, para jugar presiona la tecla n")
+while True:
+      tecla = readkey()
+      if tecla == "n":
+        limpiar_pantalla()
+        imprir_numero(contador)
+        if contador == 50:
+            print("Fin del Juego")
+            break
+        contador += 1
